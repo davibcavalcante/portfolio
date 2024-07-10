@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .min-h-home {
+        min-height: calc(100vh - 64px);
+    }
+
+    .h-timeline {
+        height: calc(100vh - 40px);
+    }
+}
