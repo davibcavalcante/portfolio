@@ -6,14 +6,14 @@ const Testimonials = () => {
         {
             name: 'Tayrone Ramos',
             office: 'Cliente',
-            photo: '/src/assets/testimonials/2.jpg',
+            photo: '/portfolio/src/assets/testimonials/2.jpg',
             text: 'Estamos extremamente satisfeitos com o trabalho excepcional que o Davi realizou para o nós do Jubão Fora de Estrada Automóvel Clube. O site desenvolvido por ele não apenas atendeu, mas superou todas as nossas expectativas. A habilidade técnica e o profissionalismo foram impressionantes, desde a concepção inicial até a implementação final. Agradecemos pela dedicação em capturar a essência do nosso projeto e transformá-la em uma plataforma online tão funcional. Sem dúvida, recomendamos os serviços de desenvolvimento do Davi a todos que buscam qualidade e excelência.'
         },
 
         {
             name: 'Myriad',
             office: 'Cliente',
-            photo: '/src/assets/testimonials/1.jpg',
+            photo: '/portfolio/src/assets/testimonials/1.jpg',
             text: 'Fiquei muito feliz com o resultado final do site que o Davi desenvolveu para o meu casamento. É um profissional de muita qualidade técnica, além da educação e responsabilidade com o projeto e prazos. Recomendo totalmente.'
         },
     ]

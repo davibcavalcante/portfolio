@@ -97,7 +97,7 @@ const About = () => {
                                 <h3 className='text-opaque text-2xl mb-4'>{item.name}:</h3>
                                 <section className='flex gap-4 overflow-x-auto'>
                                     {item.skills.map(item =>
-                                        <img src={`/src/assets/logos/logo-${item}.png`} alt={`Logo de ${item}`} className={`bg-white p-1 rounded-full ${item === 'figma' ? 'w-10' : 'w-14'}`} key={item} />
+                                        <img src={`/portfolio/src/assets/logos/logo-${item}.png`} alt={`Logo de ${item}`} className={`bg-white p-1 rounded-full ${item === 'figma' ? 'w-10' : 'w-14'}`} key={item} />
                                     )}
                                 </section>
                             </section>
