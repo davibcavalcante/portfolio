@@ -4,7 +4,7 @@ import { sendMail } from "../../utils/sendMail"
 
 const Contact = () => {
     const [focusState, setFocusState] = useState({
-        name: false,
+        subject: false,
         email: false,
     })
 
@@ -43,19 +43,19 @@ const Contact = () => {
                 <h1 className="text-white text-xl font-semibold mb-4 lg:text-3xl">Me envie um email!</h1>
                 <form autoComplete="off" onSubmit={sendMail} className="flex flex-col gap-8">
                     <section className="relative">
-                        <input type="text" name="name" placeholder="Nome •" className="bg-transparent w-full outline-none" onFocus={() => handleFocus('name')} onBlur={() => handleBlur('name')} />
+                        <input type="text" name="subject" placeholder="Assunto •" className="text-white bg-transparent w-full outline-none" onFocus={() => handleFocus('subject')} onBlur={() => handleBlur('subject')} />
                         <div className="bg-white w-full h-0.5">
                             <div className={`bg-light-blue ${focusState.name ? 'w-full' : 'w-0'} h-0.5 duration-500`}></div>
                         </div>
                     </section>
                     <section>
-                        <input type="email" name="email" placeholder="Email •" className="bg-transparent w-full outline-none" onFocus={() => handleFocus('email')} onBlur={() => handleBlur('email')} />
+                        <input type="email" name="email" placeholder="Seu Email •" className="text-white bg-transparent w-full outline-none" onFocus={() => handleFocus('email')} onBlur={() => handleBlur('email')} />
                         <div className="bg-white w-full h-0.5">
                             <div className={`bg-light-blue ${focusState.email ? 'w-full' : 'w-0'} h-0.5 duration-500`}></div>
                         </div>
                     </section>
                     <section>
-                        <textarea type="text" name="message" className="bg-transparent border-2 border-white p-2 w-full min-h-20 lg:min-h-40" placeholder="Mensagem •" />
+                        <textarea type="text" name="message" className="text-white bg-transparent border-2 border-white p-2 w-full min-h-20 lg:min-h-40" placeholder="Mensagem •" />
                     </section>
                     <button type="submit" className="bg-white w-fit px-8 py-1">Enviar</button>
                 </form>
