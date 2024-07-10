@@ -1,5 +1,5 @@
 import { Quote } from "lucide-react"
-import image1 from '../../assets/testimonials/1.jpg'
+// import image1 from '../../assets/testimonials/1.jpg'
 
 const Testimonials = () => {
 
@@ -14,7 +14,7 @@ const Testimonials = () => {
         {
             name: 'Myriad',
             office: 'Cliente',
-            photo: image1,
+            photo: '../../assets/testimonials/1.jpg',
             text: 'Fiquei muito feliz com o resultado final do site que o Davi desenvolveu para o meu casamento. É um profissional de muita qualidade técnica, além da educação e responsabilidade com o projeto e prazos. Recomendo totalmente.'
         },
     ]
