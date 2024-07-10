@@ -99,7 +99,7 @@ const About = () => {
                                 <h3 className='text-opaque text-2xl mb-4'>{item.name}:</h3>
                                 <section className='flex gap-4 overflow-x-auto'>
                                     {item.skills.map((item, index) =>
-                                        <img src={item} alt="" className={`bg-white p-1 rounded-full ${item.includes('figma') ? 'w-10' : 'w-14'}`} key={index} />
+                                        <img src={item} alt="" className={`bg-white p-1 rounded-full w-14`} key={index} />
                                     )}
                                 </section>
                             </section>
