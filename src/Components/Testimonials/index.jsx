@@ -1,5 +1,6 @@
 import { Quote } from "lucide-react"
-// import image1 from '../../assets/testimonials/1.jpg'
+import IMG1 from '../../assets/testimonials/1.jpg'
+import IMG2 from '../../assets/testimonials/2.jpg'
 
 const Testimonials = () => {
 
@@ -7,14 +8,14 @@ const Testimonials = () => {
         {
             name: 'Tayrone Ramos',
             office: 'Cliente',
-            photo: '/portfolio/src/assets/testimonials/2.jpg',
+            photo: IMG2,
             text: 'Estamos extremamente satisfeitos com o trabalho excepcional que o Davi realizou para o nós do Jubão Fora de Estrada Automóvel Clube. O site desenvolvido por ele não apenas atendeu, mas superou todas as nossas expectativas. A habilidade técnica e o profissionalismo foram impressionantes, desde a concepção inicial até a implementação final. Agradecemos pela dedicação em capturar a essência do nosso projeto e transformá-la em uma plataforma online tão funcional. Sem dúvida, recomendamos os serviços de desenvolvimento do Davi a todos que buscam qualidade e excelência.'
         },
 
         {
             name: 'Myriad',
             office: 'Cliente',
-            photo: '../../assets/testimonials/1.jpg',
+            photo: IMG1,
             text: 'Fiquei muito feliz com o resultado final do site que o Davi desenvolveu para o meu casamento. É um profissional de muita qualidade técnica, além da educação e responsabilidade com o projeto e prazos. Recomendo totalmente.'
         },
     ]

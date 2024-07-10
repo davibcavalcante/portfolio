@@ -2,6 +2,8 @@ import { useState, useRef, useEffect } from 'react'
 import { X } from 'lucide-react'
 import TextExperience from './TextExperience'
 
+import { frontend, backend, code, design } from '../../utils/exportImages'
+
 const About = () => {
     const [timelineStatus, setTimelineStatus] = useState(false)
     const timelineRef = useRef(null);
@@ -69,10 +71,10 @@ const About = () => {
     ]
 
     const skills = [
-        { name: 'Frontend', skills: ['html', 'css', 'js', 'react', 'tailwindcss'] },
-        { name: 'Backend', skills: ['node', 'python', 'java', 'mysql', 'mongo'] },
-        { name: 'Código', skills: ['git', 'github'] },
-        { name: 'Design', skills: ['figma', 'photoshop', 'illustrator'] },
+        { name: 'Frontend', skills: frontend },
+        { name: 'Backend', skills: backend },
+        { name: 'Código', skills: code },
+        { name: 'Design', skills: design },
     ]
 
     return (
@@ -96,8 +98,8 @@ const About = () => {
                             <section key={item.name} className={`${timelineStatus ? 'bg-black' : 'bg-dark-blue'} p-4 rounded-xl lg:w-5/12 2xl:w-full`}>
                                 <h3 className='text-opaque text-2xl mb-4'>{item.name}:</h3>
                                 <section className='flex gap-4 overflow-x-auto'>
-                                    {item.skills.map(item =>
-                                        <img src={`/portfolio/src/assets/logos/logo-${item}.png`} alt={`Logo de ${item}`} className={`bg-white p-1 rounded-full ${item === 'figma' ? 'w-10' : 'w-14'}`} key={item} />
+                                    {item.skills.map((item, index) =>
+                                        <img src={item} alt="" className={`bg-white p-1 rounded-full ${item.includes('figma') ? 'w-10' : 'w-14'}`} key={index} />
                                     )}
                                 </section>
                             </section>

@@ -3,6 +3,10 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
+import indigital from '../../assets/projects/indigital-movies.png'
+import casamento from '../../assets/projects/casamento.png'
+import rally from '../../assets/projects/rally-jubao.png'
+
 const Carousel = () => {
     const showDescription = (e) => {
         const project = e.target.id
@@ -49,13 +53,13 @@ const Carousel = () => {
         <div className="slider-container w-full mx-auto">
             <Slider {...settings} >
                 <div className="p-3">
-                    <img className="w-full h-auto object-cover rounded-2xl shadow-xl" src="/portfolio/src/assets/projects/indigital-movies.png" alt="" id='indigital' onClick={showDescription} />
+                    <img className="w-full h-auto object-cover rounded-2xl shadow-xl" src={indigital} alt="" id='indigital' onClick={showDescription} />
                 </div>
                 <div className="p-4">
-                    <img className="w-full h-auto object-cover rounded-2xl shadow-xl" src="/portfolio/src/assets/projects/casamento.png" alt="" id='casamento' onClick={showDescription} />
+                    <img className="w-full h-auto object-cover rounded-2xl shadow-xl" src={casamento} alt="" id='casamento' onClick={showDescription} />
                 </div>
                 <div className="p-4">
-                    <img className="w-full h-auto object-cover rounded-2xl shadow-xl" src="/portfolio/src/assets/projects/rally-jubao.png" alt="" id='rally' onClick={showDescription} />
+                    <img className="w-full h-auto object-cover rounded-2xl shadow-xl" src={rally} alt="" id='rally' onClick={showDescription} />
                 </div>
             </Slider>
         </div>
