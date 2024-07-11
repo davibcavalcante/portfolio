@@ -5,7 +5,4 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   base: '/portfolio',
   plugins: [react()],
-  define: {
-    'process.env.VITE_IP_API_CONFIG': JSON.stringify(process.env.VITE_IP_API_CONFIG)
-  }
 })
