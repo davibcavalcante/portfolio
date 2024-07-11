@@ -1,5 +1,7 @@
 import { Github, Instagram, Linkedin } from 'lucide-react'
 
+import cv from '../../assets/cv-davi-cavalcante.pdf'
+
 const Home = () => {
     return (
         <section className='text-white bg-dark-blue flex flex-col items-center gap-9 py-8 px-4 min-h-home xl:justify-center'>
@@ -25,7 +27,7 @@ const Home = () => {
                 <a href="#"><Instagram size={30}/></a>
             </section>
             <section>
-                <a className='text-xl border border-white py-2 px-8 rounded-full' href='/src/assets/cv-davi-cavalcante.pdf' type='application/pdf' download={'Davi Barbosa Cavalcante.pdf'}>
+                <a className='text-xl border border-white py-2 px-8 rounded-full' href={cv} type='application/pdf' download={'Davi Barbosa Cavalcante.pdf'}>
                     Download CV
                 </a>
             </section>
