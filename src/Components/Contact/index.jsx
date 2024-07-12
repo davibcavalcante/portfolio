@@ -45,7 +45,7 @@ const Contact = () => {
     const contact = [
         { icon: <Phone />, info: 'Número', content: '+55 (62) 98159-7835' },
         { icon: <Mail />, info: 'Email', content: 'indigitalprogcontato@gmail.com' },
-        { icon: <Locate />, info: 'Addres', content: 'Goiânia, Goiás' },
+        { icon: <Locate />, info: 'Endereço', content: 'Goiânia, Goiás' },
     ]
 
     return (
