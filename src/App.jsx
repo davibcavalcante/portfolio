@@ -5,16 +5,17 @@ import About from "./Components/About"
 import Projects from "./Components/Projects"
 import Testimonials from './Components/Testimonials'
 import Contact from './Components/Contact'
+import Alert from './Components/Alert'
 
 function App() {
   return (
     <>
-      <Header/>
-      <Home/>
-      <About/>
-      <Projects/>
-      <Testimonials/>
-      <Contact/>
+      <Header />
+      <Home />
+      <About />
+      <Projects />
+      <Testimonials />
+      <Contact />
     </>
   )
 }

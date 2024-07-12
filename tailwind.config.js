@@ -13,6 +13,8 @@ export default {
       'blue': '#012030',
       'dark-blue': '#001525',
       'light-blue': '#13678A',
+      'ok-alert': '#00AA90',
+      'bad-alert': '#AA0020'
     },
 
     extend: {},

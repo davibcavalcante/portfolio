@@ -1,8 +1,14 @@
 import { Locate, Mail, Phone } from "lucide-react"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { sendMail } from "../../utils/sendMail"
 
+import Alert from "../Alert"
+
 const Contact = () => {
+    const [alertHidden, setAlertHidden] = useState(true)
+    const [message, setMessage] = useState('')
+    const [status, setStatus] = useState()
+
     const [focusState, setFocusState] = useState({
         subject: false,
         email: false,
@@ -15,6 +21,26 @@ const Contact = () => {
     const handleBlur = (field) => {
         setFocusState({ ...focusState, [field]: false });
     }
+
+    const sendData = async (e) => {
+        e.preventDefault()
+        const form = e.target
+
+        const { message, status, hidden } = await sendMail(form)
+
+        setMessage(message)
+        setStatus(status)
+        setAlertHidden(hidden)
+
+        form.reset()
+        form.subject.focus()
+    }
+
+    useEffect(() => {
+        setTimeout(() => {
+            setAlertHidden(true)
+        }, 2000)
+    }, [alertHidden])
 
     const contact = [
         { icon: <Phone />, info: 'Número', content: '+55 (62) 98159-7835' },
@@ -41,7 +67,7 @@ const Contact = () => {
             </section>
             <section className="bg-blue py-6 px-4">
                 <h1 className="text-white text-xl font-semibold mb-4 lg:text-3xl">Me envie um email!</h1>
-                <form autoComplete="off" onSubmit={sendMail} className="flex flex-col gap-8">
+                <form autoComplete="off" onSubmit={ (e) => sendData(e) } className="flex flex-col gap-8">
                     <section className="relative">
                         <input type="text" name="subject" placeholder="Assunto •" className="text-white bg-transparent w-full outline-none" onFocus={() => handleFocus('subject')} onBlur={() => handleBlur('subject')} />
                         <div className="bg-white w-full h-0.5">
@@ -60,6 +86,7 @@ const Contact = () => {
                     <button type="submit" className="bg-white w-fit px-8 py-1">Enviar</button>
                 </form>
             </section>
+            <Alert message={message} status={status} hidden={alertHidden} />
         </section>
     )
 }

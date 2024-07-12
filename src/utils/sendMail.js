@@ -1,20 +1,21 @@
-import { CarTaxiFront } from "lucide-react"
 import { apiFetch } from "../axios/config"
 
-export const sendMail = async (e) => {
-    e.preventDefault()
-
+export const sendMail = async (form) => {
     const formData = {
-        from: e.target.email.value,
-        subject: e.target.subject.value,
-        message: e.target.message.value
+        from: form.email.value,
+        subject: form.subject.value,
+        message: form.message.value
     }
 
     try {
         const results = await apiFetch.post('/sendmail', formData)
-        const data = await results.data
-        console.log(data.message)
+        
+        if (results.status === 200) {
+            const message = await results.data.message      
+            return { message, status: true, hidden: false }
+        }
+
     } catch (err) {
-        console.log(err)
+        return { message: err.message, status: false, hidden: false }
     }
 }
