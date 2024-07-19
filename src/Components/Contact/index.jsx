@@ -1,10 +1,10 @@
 import { Locate, Mail, Phone } from "lucide-react"
-import { useState, useEffect } from "react"
+import { useState, useEffect, forwardRef } from "react"
 import { sendMail } from "../../utils/sendMail"
 
 import Alert from "../Alert"
 
-const Contact = () => {
+const Contact = forwardRef(( props, ref ) => {
     const [alertHidden, setAlertHidden] = useState(true)
     const [message, setMessage] = useState('')
     const [status, setStatus] = useState()
@@ -49,7 +49,7 @@ const Contact = () => {
     ]
 
     return (
-        <section className="bg-dark-blue h-auto py-8 px-4 flex flex-col gap-6 2xl:py-12 2xl:px-52">
+        <section className="bg-dark-blue h-auto py-8 px-4 flex flex-col gap-6 2xl:py-12 2xl:px-52" ref={ref}>
             <h1 className="text-white text-5xl font-semibold lg:text-6xl">Contato</h1>
             <p className="text-opaque md:max-w-2xl lg:text-xl 2xl:leading-relaxed">Veja abaixo todas as minhas informações de contato. Estou sempre aberto para falar sobre projetos e negócios.</p>
             <section className="flex flex-col gap-4 lg:flex-row">
@@ -71,7 +71,7 @@ const Contact = () => {
                     <section className="relative">
                         <input type="text" name="subject" placeholder="Assunto •" className="text-white bg-transparent w-full outline-none" onFocus={() => handleFocus('subject')} onBlur={() => handleBlur('subject')} />
                         <div className="bg-white w-full h-0.5">
-                            <div className={`bg-light-blue ${focusState.name ? 'w-full' : 'w-0'} h-0.5 duration-500`}></div>
+                            <div className={`bg-light-blue ${focusState.subject ? 'w-full' : 'w-0'} h-0.5 duration-500`}></div>
                         </div>
                     </section>
                     <section>
@@ -89,6 +89,6 @@ const Contact = () => {
             <Alert message={message} status={status} hidden={alertHidden} />
         </section>
     )
-}
+})
 
 export default Contact

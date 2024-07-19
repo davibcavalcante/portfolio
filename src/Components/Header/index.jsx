@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import Menu from './MenuBar'
 import Nav from './Nav'
 
-const Header = () => {
+const Header = ({ homeRef, aboutRef, projectsRef, contactRef }) => {
     const [ active, setMode ] = useState(false)
 
     const toggleMenu = () => {
@@ -23,7 +23,7 @@ const Header = () => {
 
     return (
         <header className='relative'>
-            <Nav active={active}/>
+            <Nav active={active} homeRef={homeRef} aboutRef={aboutRef} projectsRef={projectsRef} contactRef={contactRef} />
             <Menu active={active} func={toggleMenu}/>
         </header>
     )

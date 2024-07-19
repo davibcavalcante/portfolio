@@ -10,7 +10,6 @@ import rally from '../../assets/projects/rally-jubao.png'
 const Carousel = () => {
     const showDescription = (e) => {
         const project = e.target.id
-        console.log(project)
     }
 
     const NextArrow = ({ onClick }) => {

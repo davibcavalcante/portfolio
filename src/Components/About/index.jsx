@@ -1,10 +1,10 @@
-import { useState, useRef, useEffect } from 'react'
+import { useState, useRef, useEffect, forwardRef } from 'react'
 import { X } from 'lucide-react'
 import TextExperience from './TextExperience'
 
 import { frontend, backend, code, design } from '../../utils/exportImages'
 
-const About = () => {
+const About = forwardRef((props, ref) => {
     const [timelineStatus, setTimelineStatus] = useState(false)
     const timelineRef = useRef(null);
 
@@ -78,7 +78,7 @@ const About = () => {
     ]
 
     return (
-        <section className={`py-8 px-4 flex flex-col gap-8 relative ${timelineStatus ? 'bg-black' : 'bg-blue'} duration-300 2xl:py-16 2xl:px-52`}>
+        <section className={`py-8 px-4 flex flex-col gap-8 relative ${timelineStatus ? 'bg-black' : 'bg-blue'} duration-300 2xl:py-16 2xl:px-52`} ref={ref}>
             <section className='flex flex-col gap-8 2xl:flex-row 2xl:justify-between'>
                 <section className='flex flex-col gap-4 2xl:w-6/12'>
                     <h1 className='text-white text-5xl font-bold lg:text-6xl'>Sobre Mim</h1>
@@ -122,6 +122,6 @@ const About = () => {
             </section>
         </section>
     )
-}
+})
 
 export default About

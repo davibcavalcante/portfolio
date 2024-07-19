@@ -1,21 +1,27 @@
 import './styles/index.css'
+import { useEffect, useRef } from 'react'
 import Header from "./Components/Header"
-import Home from "./Components/Home"
+import HomePage from "./Components/HomePage"
 import About from "./Components/About"
 import Projects from "./Components/Projects"
 import Testimonials from './Components/Testimonials'
 import Contact from './Components/Contact'
-import Alert from './Components/Alert'
 
 function App() {
+
+  const homeRef = useRef(null);
+  const aboutRef = useRef(null);
+  const projectsRef = useRef(null);
+  const contactRef = useRef(null);
+
   return (
     <>
-      <Header />
-      <Home />
-      <About />
-      <Projects />
+      <Header homeRef={homeRef} aboutRef={aboutRef} projectsRef={projectsRef} contactRef={contactRef} />
+      <HomePage ref={homeRef} />
+      <About ref={aboutRef} />
+      <Projects ref={projectsRef} />
       <Testimonials />
-      <Contact />
+      <Contact ref={contactRef} />
     </>
   )
 }
