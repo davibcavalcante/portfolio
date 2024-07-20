@@ -25,7 +25,7 @@ const Testimonials = () => {
             <h1 className="text-white text-5xl font-semibold lg:text-6xl">Depoimentos</h1>
             <p className="text-opaque text-xl md:max-w-2xl lg:text-xl 2xl:leading-relaxed">Veja quais foram as experiências dos meus clientes em relação ao meu trabalho e aos projetos desenvolvidos</p>
             {testimonials.map(item =>
-                <section className="bg-dark-blue h-auto py-8 px-4 flex flex-col gap-6 rounded-xl shadow-xl" key={item.name}>
+                <section className="bg-dark-blue h-auto py-8 px-4 flex flex-col gap-6 rounded-xl shadow-xl animate-flip-down animate-twice animate-duration-1000 animate-delay-[250ms] animate-ease-in-out" key={item.name}>
                     <section>
                         <section className="flex gap-4">
                             <section className="w-16">

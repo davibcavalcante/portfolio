@@ -47,17 +47,17 @@ const Carousel = () => {
     return (
         <div className="slider-container w-full mx-auto">
             <Slider {...settings} >
-                <div className="p-3">
+                <div className="p-4 animate-fade-down animate-twice animate-duration-1000 animate-delay-[250ms] animate-ease-in-out">
                     <a href="https://davibcavalcante.github.io/indigital-movies" target='_blank' rel='external'>
                         <img className="w-full h-auto object-cover rounded-2xl shadow-xl cursor-pointer lg:hover:scale-110 lg:duration-300" src={indigital} alt="" />
                     </a>
                 </div>
-                <div className="p-4">
+                <div className="p-4 animate-fade-down animate-twice animate-duration-1000 animate-delay-[250ms] animate-ease-in-out">
                     <a href="https://casamentomm.online" target='_blank' rel='external'>
                         <img className="w-full h-auto object-cover rounded-2xl shadow-xl cursor-pointer lg:hover:scale-110 lg:duration-300" src={casamento} alt="" />
                     </a>
                 </div>
-                <div className="p-4">
+                <div className="p-4 animate-fade-down animate-twice animate-duration-1000 animate-delay-[250ms] animate-ease-in-out">
                     <a href="https://jubaofe.com.br" target='_blank' rel='external'>
                         <img className="w-full h-auto object-cover rounded-2xl shadow-xl cursor-pointer lg:hover:scale-110 lg:duration-300" src={rally} alt="" />
                     </a>

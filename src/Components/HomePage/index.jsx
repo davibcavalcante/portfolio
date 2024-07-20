@@ -6,7 +6,7 @@ import { forwardRef } from 'react'
 const HomePage = forwardRef((props, ref) => {
     return (
         <section className='text-white bg-dark-blue flex flex-col items-center gap-9 py-8 px-4 min-h-home xl:justify-center' ref={ref}>
-            <section className='w-6/12 max-w-60 h-auto rounded-full overflow-hidden'>
+            <section className='w-6/12 max-w-60 h-auto rounded-full overflow-hidden animate-rotate-y animate-twice animate-duration-1000 animate-delay-[250ms] animate-ease-in-out'>
                 <img src="https://github.com/davibcavalcante.png" alt="Foto de perfil de Davi Barbosa Cavalcante" />
             </section>
             <section className='flex flex-col items-center gap-4 max-w-3xl'>
