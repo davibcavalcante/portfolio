@@ -23,9 +23,15 @@ const HomePage = forwardRef((props, ref) => {
                 </div>
             </section>
             <section className='text-opaque flex gap-4'>
-                <a href="#"><Github size={30}/></a>
-                <a href="#"><Linkedin size={30}/></a>
-                <a href="#"><Instagram size={30}/></a>
+                <a href="https://github.com/davibcavalcante" target='_blank' rel='external' className='lg:hover:scale-125 lg:hover:text-light-blue lg:duration-500'>
+                    <Github size={30} />
+                </a>
+                <a href="https://www.linkedin.com/in/davi-barbosa-cavalcante-b32a14201/" target='_blank' rel='external' className='lg:hover:scale-125 lg:hover:text-light-blue lg:duration-500'>
+                    <Linkedin size={30} />
+                </a>
+                <a href="https://www.instagram.com/agencia_indigital/" target='_blank' rel='external' className='lg:hover:scale-125 lg:hover:text-light-blue lg:duration-500'>
+                    <Instagram size={30} />
+                </a>
             </section>
             <section>
                 <a className='text-xl border border-white py-2 px-8 rounded-full' href={cv} type='application/pdf' download={'Davi Barbosa Cavalcante.pdf'}>

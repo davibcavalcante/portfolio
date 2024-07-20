@@ -8,10 +8,6 @@ import casamento from '../../assets/projects/casamento.png'
 import rally from '../../assets/projects/rally-jubao.png'
 
 const Carousel = () => {
-    const showDescription = (e) => {
-        const project = e.target.id
-    }
-
     const NextArrow = ({ onClick }) => {
         return (
             <ChevronRight size={45} color='white' className='bg-light-blue p-2 rounded-full absolute top-1/2 right-0 z-50 -translate-y-1/2 hidden md:block md:cursor-pointer' onClick={onClick} />
@@ -27,7 +23,7 @@ const Carousel = () => {
     const settings = {
         dots: true,
         appendDots: dots => (
-            <div style={{display: 'flex', justifyContent: 'center'}}>
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
                 <ul style={{ backgroundColor: 'white', margin: "0px", borderRadius: '8px' }}> {dots} </ul>
             </div>
         ),
@@ -52,13 +48,19 @@ const Carousel = () => {
         <div className="slider-container w-full mx-auto">
             <Slider {...settings} >
                 <div className="p-3">
-                    <img className="w-full h-auto object-cover rounded-2xl shadow-xl" src={indigital} alt="" id='indigital' onClick={showDescription} />
+                    <a href="https://davibcavalcante.github.io/indigital-movies" target='_blank' rel='external'>
+                        <img className="w-full h-auto object-cover rounded-2xl shadow-xl cursor-pointer lg:hover:scale-110 lg:duration-300" src={indigital} alt="" />
+                    </a>
                 </div>
                 <div className="p-4">
-                    <img className="w-full h-auto object-cover rounded-2xl shadow-xl" src={casamento} alt="" id='casamento' onClick={showDescription} />
+                    <a href="https://casamentomm.online" target='_blank' rel='external'>
+                        <img className="w-full h-auto object-cover rounded-2xl shadow-xl cursor-pointer lg:hover:scale-110 lg:duration-300" src={casamento} alt="" />
+                    </a>
                 </div>
                 <div className="p-4">
-                    <img className="w-full h-auto object-cover rounded-2xl shadow-xl" src={rally} alt="" id='rally' onClick={showDescription} />
+                    <a href="https://jubaofe.com.br" target='_blank' rel='external'>
+                        <img className="w-full h-auto object-cover rounded-2xl shadow-xl cursor-pointer lg:hover:scale-110 lg:duration-300" src={rally} alt="" />
+                    </a>
                 </div>
             </Slider>
         </div>

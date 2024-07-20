@@ -16,7 +16,7 @@ const Testimonials = () => {
             name: 'Myriad',
             office: 'Cliente',
             photo: IMG1,
-            text: 'Fiquei muito feliz com o resultado final do site que o Davi desenvolveu para o meu casamento. É um profissional de muita qualidade técnica, além da educação e responsabilidade com o projeto e prazos. Recomendo totalmente.'
+            text: 'O site do meu casamento ficou perfeito. Exatamente do jeito que eu queria. Escolhemos as cores e o que queríamos que tivesse no site e o Davi idealizou a estrutura que nos atendeu super bem. Todos os meus convidados acharam lindo e eu fiquei muito feliz com a entrega dele. Site maravilhoso.'
         },
     ]
 
