@@ -2,7 +2,7 @@ import { CodeXml, Home, Phone, Users, Github } from 'lucide-react'
 import Options from './Options'
 import { useEffect, useRef } from 'react'
 
-const Nav = ({ active, homeRef, aboutRef, projectsRef, contactRef }) => {
+const Nav = ({ active, toggleMenuMode, homeRef, aboutRef, projectsRef, contactRef }) => {
 
     useEffect(() => {
         if (active) document.querySelector('body').style.overflowY = 'hidden'
@@ -12,23 +12,31 @@ const Nav = ({ active, homeRef, aboutRef, projectsRef, contactRef }) => {
     }, [active])
 
     const scrollToHome = () => {
-        if (homeRef.current)
+        if (homeRef.current) {
             homeRef.current.scrollIntoView({ behavior: "smooth" })
+            toggleMenuMode()
+        }
     }
 
     const scrollToAbout = () => {
-        if (aboutRef.current)
+        if (aboutRef.current) {
             aboutRef.current.scrollIntoView({ behavior: "smooth" })
+            toggleMenuMode()
+        }
     }
 
     const scrollToProjects = () => {
-        if (projectsRef.current)
+        if (projectsRef.current) {
             projectsRef.current.scrollIntoView({ behavior: "smooth" })
+            toggleMenuMode()
+        }
     }
 
     const scrollToContacts = () => {
-        if (contactRef.current)
+        if (contactRef.current) {
             contactRef.current.scrollIntoView({ behavior: "smooth" })
+            toggleMenuMode()
+        }
     }
 
     const options = [
@@ -40,7 +48,7 @@ const Nav = ({ active, homeRef, aboutRef, projectsRef, contactRef }) => {
     ]
 
     return (
-        <nav className={`bg-light-blue absolute ${active ? 'left-0' : '-left-full'} w-9/12 h-screen py-16 flex flex-col duration-500 lg:bg-black lg:static lg:w-full lg:h-16 lg:py-0 lg:px-4 lg:flex-row lg:items-center xl:px-8`}>
+        <nav className={`bg-light-blue absolute ${active ? 'left-0' : '-left-full'} w-9/12 h-screen py-16 flex flex-col duration-500 z-50 lg:bg-black lg:static lg:w-full lg:h-16 lg:py-0 lg:px-4 lg:flex-row lg:items-center xl:px-8`}>
             <ul className='flex-1 border-y border-white lg:flex lg:items-center lg:justify-end lg:gap-8 lg:border-0'>
                 {options.map(item => <Options name={item.name} icon={item.icon} func={item.func} path={item.path} key={item.name} />)}
             </ul>
