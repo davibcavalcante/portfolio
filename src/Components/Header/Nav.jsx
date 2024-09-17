@@ -1,41 +1,41 @@
 import { CodeXml, Home, Phone, Users, Github } from 'lucide-react'
 import Options from './Options'
-import { useEffect, useRef } from 'react'
 
 const Nav = ({ active, toggleMenuMode, homeRef, aboutRef, projectsRef, contactRef }) => {
-
-    useEffect(() => {
-        if (active) document.querySelector('body').style.overflowY = 'hidden'
-
-        if (!active) document.querySelector('body').style.overflowY = 'auto'
-
-    }, [active])
 
     const scrollToHome = () => {
         if (homeRef.current) {
             homeRef.current.scrollIntoView({ behavior: "smooth" })
-            toggleMenuMode()
+            if (window.innerWidth < 1024) {
+                toggleMenuMode()
+            }
         }
     }
 
     const scrollToAbout = () => {
         if (aboutRef.current) {
             aboutRef.current.scrollIntoView({ behavior: "smooth" })
-            toggleMenuMode()
+            if (window.innerWidth < 1024) {
+                toggleMenuMode()
+            }
         }
     }
 
     const scrollToProjects = () => {
         if (projectsRef.current) {
             projectsRef.current.scrollIntoView({ behavior: "smooth" })
-            toggleMenuMode()
+            if (window.innerWidth < 1024) {
+                toggleMenuMode()
+            }
         }
     }
 
     const scrollToContacts = () => {
         if (contactRef.current) {
             contactRef.current.scrollIntoView({ behavior: "smooth" })
-            toggleMenuMode()
+            if (window.innerWidth < 1024) {
+                toggleMenuMode()
+            }
         }
     }
 
