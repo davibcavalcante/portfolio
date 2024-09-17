@@ -9,7 +9,7 @@ const Testimonials = () => {
             name: 'Tayrone Ramos',
             office: 'Cliente',
             photo: IMG2,
-            text: 'Estamos extremamente satisfeitos com o trabalho excepcional que o Davi realizou para o nós do Jubão Fora de Estrada Automóvel Clube. O site desenvolvido por ele não apenas atendeu, mas superou todas as nossas expectativas. A habilidade técnica e o profissionalismo foram impressionantes, desde a concepção inicial até a implementação final. Agradecemos pela dedicação em capturar a essência do nosso projeto e transformá-la em uma plataforma online tão funcional. Sem dúvida, recomendamos os serviços de desenvolvimento do Davi a todos que buscam qualidade e excelência.'
+            text: 'Davi, muito obrigado por ter aceitado esse desafio. Superando todas as nossas expectativas e nos surpreendendo com sua visão e talento. Em todo o processo desde o início foi sempre atento às nossas necessidades e demandas para o site, sempre nos manteve informados e atualizados sobre o andamento do projeto. Só tenho que agradecer em nome de todo o JubãoFe pelo excelente trabalho desenvolvido e por toda a parceria.'
         },
 
         {
