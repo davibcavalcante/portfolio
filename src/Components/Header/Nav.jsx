@@ -3,9 +3,14 @@ import Options from './Options'
 
 const Nav = ({ active, toggleMenuMode, homeRef, aboutRef, projectsRef, contactRef }) => {
 
+    const topOffset = -20;
+
     const scrollToHome = () => {
         if (homeRef.current) {
-            homeRef.current.scrollIntoView({ behavior: "smooth" })
+            const elementTop = homeRef.current.getBoundingClientRect().top;
+            const offsetPosition = elementTop + window.pageYOffset + topOffset;
+            window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+
             if (window.innerWidth < 1024) {
                 toggleMenuMode()
             }
@@ -14,7 +19,10 @@ const Nav = ({ active, toggleMenuMode, homeRef, aboutRef, projectsRef, contactRe
 
     const scrollToAbout = () => {
         if (aboutRef.current) {
-            aboutRef.current.scrollIntoView({ behavior: "smooth" })
+            const elementTop = aboutRef.current.getBoundingClientRect().top;
+            const offsetPosition = elementTop + window.pageYOffset + topOffset;
+            window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+
             if (window.innerWidth < 1024) {
                 toggleMenuMode()
             }
@@ -23,7 +31,10 @@ const Nav = ({ active, toggleMenuMode, homeRef, aboutRef, projectsRef, contactRe
 
     const scrollToProjects = () => {
         if (projectsRef.current) {
-            projectsRef.current.scrollIntoView({ behavior: "smooth" })
+            const elementTop = projectsRef.current.getBoundingClientRect().top;
+            const offsetPosition = elementTop + window.pageYOffset + topOffset;
+            window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+
             if (window.innerWidth < 1024) {
                 toggleMenuMode()
             }
@@ -32,7 +43,10 @@ const Nav = ({ active, toggleMenuMode, homeRef, aboutRef, projectsRef, contactRe
 
     const scrollToContacts = () => {
         if (contactRef.current) {
-            contactRef.current.scrollIntoView({ behavior: "smooth" })
+            const elementTop = contactRef.current.getBoundingClientRect().top;
+            const offsetPosition = elementTop + window.pageYOffset + topOffset;
+            window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+
             if (window.innerWidth < 1024) {
                 toggleMenuMode()
             }

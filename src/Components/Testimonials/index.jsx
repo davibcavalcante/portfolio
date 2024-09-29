@@ -1,8 +1,12 @@
+import { forwardRef } from "react";
+import useOnScreen from "../../hooks/useOnScreen"
+
 import { Quote } from "lucide-react"
 import IMG1 from '../../assets/testimonials/1.jpg'
 import IMG2 from '../../assets/testimonials/2.jpg'
 
-const Testimonials = () => {
+const Testimonials = forwardRef((props, ref) => {
+    const isVisible = useOnScreen(ref)
 
     const testimonials = [
         {
@@ -21,11 +25,11 @@ const Testimonials = () => {
     ]
 
     return (
-        <section className="bg-blue h-auto py-8 px-4 flex flex-col gap-4 2xl:py-12 2xl:px-52">
+        <section className="bg-blue min-h-screen py-8 px-4 flex flex-col gap-4 2xl:py-12 2xl:px-52" ref={ref}>
             <h1 className="text-white text-5xl font-semibold lg:text-6xl">Depoimentos</h1>
             <p className="text-opaque text-xl md:max-w-2xl lg:text-xl 2xl:leading-relaxed">Veja quais foram as experiências dos meus clientes em relação ao meu trabalho e aos projetos desenvolvidos</p>
             {testimonials.map(item =>
-                <section className="bg-dark-blue h-auto py-8 px-4 flex flex-col gap-6 rounded-xl shadow-xl animate-flip-down animate-twice animate-duration-1000 animate-delay-[250ms] animate-ease-in-out" key={item.name}>
+                <section className={`bg-dark-blue h-auto py-8 px-4 flex flex-col gap-6 rounded-xl shadow-xl ${isVisible && 'animate-flip-down animate-duration-1000 animate-delay-[250ms] animate-ease-in-out'}`} key={item.name}>
                     <section>
                         <section className="flex gap-4">
                             <section className="w-16">
@@ -45,6 +49,6 @@ const Testimonials = () => {
             )}
         </section>
     )
-}
+})
 
 export default Testimonials

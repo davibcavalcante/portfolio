@@ -22,7 +22,7 @@ const Header = ({ homeRef, aboutRef, projectsRef, contactRef }) => {
     }, [active])
 
     return (
-        <header className='relative'>
+        <header className='relative lg:fixed lg:top-0 lg:min-w-full lg:z-50'>
             <Nav active={active} toggleMenuMode={toggleMenu} homeRef={homeRef} aboutRef={aboutRef} projectsRef={projectsRef} contactRef={contactRef} />
             <Menu active={active} func={toggleMenu}/>
         </header>

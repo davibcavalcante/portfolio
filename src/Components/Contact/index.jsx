@@ -49,7 +49,7 @@ const Contact = forwardRef(( props, ref ) => {
     ]
 
     return (
-        <section className="bg-dark-blue h-auto py-8 px-4 flex flex-col gap-6 2xl:py-12 2xl:px-52" ref={ref}>
+        <section className="bg-dark-blue min-h-screen py-8 px-4 flex flex-col gap-6 2xl:py-12 2xl:px-52" ref={ref}>
             <h1 className="text-white text-5xl font-semibold lg:text-6xl">Contato</h1>
             <p className="text-opaque md:max-w-2xl lg:text-xl 2xl:leading-relaxed">Veja abaixo todas as minhas informações de contato. Estou sempre aberto para falar sobre projetos e negócios.</p>
             <section className="flex flex-col gap-4 lg:flex-row">
