@@ -18,7 +18,7 @@ const HomePage = forwardRef((props, ref) => {
                 transition={{ duration: .5 }}
                 className='flex flex-col items-center gap-8'
             >
-                <section className={`w-6/12 max-w-60 h-auto rounded-full overflow-hidden`}>
+                <section className={`w-6/12 max-w-60 h-auto rounded-full overflow-hidden lg:mt-14`}>
                     <img src="https://github.com/davibcavalcante.png" alt="Foto de perfil de Davi Barbosa Cavalcante" />
                 </section>
                 <section className='flex flex-col items-center gap-4 max-w-3xl'>
