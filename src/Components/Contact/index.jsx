@@ -12,7 +12,7 @@ const Contact = forwardRef(( props, ref ) => {
     const [focusState, setFocusState] = useState({
         subject: false,
         email: false,
-    })
+    });
 
     const handleFocus = (field) => {
         setFocusState({ ...focusState, [field]: true });
