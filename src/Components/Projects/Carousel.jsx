@@ -71,7 +71,7 @@ const Carousel = ({ isVisible, setNewIndex }) => {
                         }`}
                     >
                         <a
-                            href={index === 0 ? 'https://davibcavalcante.github.io/indigital-movies' : index === 1 ? 'https://casamentomm.online' : 'https://jubaofe.com.br'}
+                            href={index === 0 ? 'https://davibcavalcante.github.io/indigital-movies' : index === 1 ? 'https://indigitalenv.online' : 'https://jubaofe.com.br'}
                             target="_blank"
                             rel="external"
                         >
