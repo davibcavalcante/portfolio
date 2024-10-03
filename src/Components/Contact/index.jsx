@@ -26,8 +26,8 @@ const Contact = forwardRef(( props, ref ) => {
         e.preventDefault()
         const form = e.target
 
-        const { message, status, hidden } = await sendMail(form)
-
+        const { message, status, hidden } = await sendMail(form);
+        
         setMessage(message)
         setStatus(status)
         setAlertHidden(hidden)
